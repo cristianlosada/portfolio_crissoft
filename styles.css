@@ -1,0 +1,154 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0A192F;
+  color: #FFFFFF;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 20%;
+  background: #0F172A;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: #5EEAD4;
+}
+
+.menu {
+  list-style: none;
+}
+
+.menu li {
+  margin: 25px 0;
+}
+
+.menu li a {
+  writing-mode: horizontal-tb;
+  text-orientation: initial;
+  color: #94A3B8;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.menu li a:hover {
+  color: #5EEAD4;
+}
+
+.social a {
+  color: #5EEAD4;
+  font-size: 20px;
+  margin: 10px 0;
+  display: block;
+}
+
+/* Main sections */
+main {
+  margin-left: 80px;
+}
+
+.section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 40px 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s ease;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.container {
+  max-width: 800px;
+  text-align: center;
+}
+
+/* Hero */
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero h2 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #94A3B8;
+  margin-bottom: 30px;
+}
+
+.highlight {
+  color: #5EEAD4;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.btn-primary, .btn-secondary {
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: #5EEAD4;
+  color: #0A192F;
+}
+
+.btn-primary:hover {
+  background: #3DDC97;
+}
+
+.btn-secondary {
+  border: 2px solid #5EEAD4;
+  color: #5EEAD4;
+  background: transparent;
+}
+
+.btn-secondary:hover {
+  background: #5EEAD4;
+  color: #0A192F;
+}
+
+/* About */
+#about p {
+  margin-bottom: 20px;
+  line-height: 1.8;
+  color: #CBD5E1;
+}
+
+

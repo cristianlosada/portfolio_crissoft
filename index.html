@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cristian Lozada - Backend Developer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav class="sidebar">
+    <div class="logo">CL</div>
+    <ul class="menu">
+      <li><a href="#home">Inicio</a></li>
+      <li><a href="#about">Sobre mí</a></li>
+      <li><a href="#projects">Proyectos</a></li>
+      <li><a href="#skills">Tecnologías</a></li>
+      <li><a href="#contact">Contacto</a></li>
+    </ul>
+    <div class="social">
+      <a href="https://github.com/cristianlosada" target="_blank">🐙</a>
+      <a href="https://linkedin.com/in/cristian-alejandro-lozada-reyes-6ab093162/" target="_blank">💼</a>
+      <a href="mailto:cristianlosano314@gmail.com" target="_blank">📧</a>
+    </div>
+  </nav>
+
+  <main>
+    <section id="home" class="hero section">
+      <div class="container">
+        <h1>Hi, soy <span class="highlight">Cristian Lozada</span>.</h1>
+        <h2>Construyo soluciones backend seguras y escalables.</h2>
+        <div class="buttons">
+          <a href="#projects" class="btn-primary">Ver proyectos</a>
+          <a href="#contact" class="btn-secondary">Contactarme</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2>Sobre mí</h2>
+        <p>
+          Soy <strong>Cristian Alejandro Lozada Reyes</strong>, desarrollador backend con más de 4 años de experiencia profesional. Especializado en <span class="highlight">Laravel</span>, <span class="highlight">Python</span> y <span class="highlight">AWS</span>, enfocado en construir soluciones seguras, escalables y eficientes.
+        </p>
+        <p>
+          Me apasiona <strong>resolver problemas reales</strong>, <strong>automatizar procesos</strong> y <strong>optimizar sistemas</strong>. Actualmente finalizando mis estudios en Ingeniería de Software, buscando siempre elevar los estándares de calidad, arquitectura y buenas prácticas en cada proyecto que desarrollo.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+<script>
+    // Mostrar sección inicial al cargar
+    window.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.section').forEach(section => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= window.innerHeight) {
+          section.classList.add('visible');
+        }
+      });
+    });
+  
+    // Mostrar las demás secciones al hacer scroll
+    window.addEventListener('scroll', () => {
+      document.querySelectorAll('.section').forEach(section => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= window.innerHeight * 0.8) {
+          section.classList.add('visible');
+        }
+      });
+    });
+  </script>
+</html>
