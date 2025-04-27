@@ -59,9 +59,14 @@ body {
 
 .social a {
   color: #5EEAD4;
-  font-size: 20px;
+  font-size: 24px;
   margin: 10px 0;
   display: block;
+  transition: color 0.3s;
+}
+
+.social a:hover {
+  color: #3DDC97;
 }
 
 /* Main sections */
