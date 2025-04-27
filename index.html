@@ -11,13 +11,15 @@
 <body>
 
   <nav class="sidebar">
-    <div class="logo">CL</div>
+    <div class="logo">
+      CL
+    </div>
     <ul class="menu">
-      <li><a href="#home"><span class="material-icons">home</span> Inicio</a></li>
-      <li><a href="#about"><span class="material-icons">person</span> Sobre mí</a></li>
-      <li><a href="#projects"><span class="material-icons">work</span> Proyectos</a></li>
-      <li><a href="#skills"><span class="material-icons">code</span> Tecnologías</a></li>
-      <li><a href="#contact"><span class="material-icons">email</span> Contacto</a></li>
+      <li><a href="#home">Inicio</a></li>
+      <li><a href="#about">Sobre mí</a></li>
+      <li><a href="#projects">Proyectos</a></li>
+      <li><a href="#skills">Tecnologías</a></li>
+      <li><a href="#contact">Contacto</a></li>
     </ul>
     <div class="social">
       <a href="https://github.com/cristianlosada" target="_blank"><i class="fab fa-github"></i></a>
@@ -54,6 +56,27 @@
 
 </body>
 <script>
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll(".menu a");
+
+  window.onscroll = () => {
+    let current = "";
+
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      if (pageYOffset >= sectionTop - 100) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    navLinks.forEach((link) => {
+      link.classList.remove("active");
+      if (link.getAttribute("href").includes(current)) {
+        link.classList.add("active");
+      }
+    });
+  };
+
     // Mostrar sección inicial al cargar
     window.addEventListener('DOMContentLoaded', () => {
       document.querySelectorAll('.section').forEach(section => {
