@@ -7,10 +7,23 @@
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Libreria de animaciónes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <!-- Libreria de css tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
 
-  <nav class="sidebar">
+
+   <!-- El contenedor del cursor con el círculo central -->
+   <div class="cursor" id="cursor">
+    <div class="inner-circle"></div> <!-- El círculo central -->
+  </div>
+
+  <!-- Barra lateral aside -->
+  <aside class="sidebar">
     <div class="logo">
       CL
     </div>
@@ -26,11 +39,14 @@
       <a href="https://linkedin.com/in/cristian-alejandro-lozada-reyes-6ab093162/" target="_blank"><i class="fab fa-linkedin"></i></a>
       <a href="mailto:cristianlosano314@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
     </div>
-  </nav>
+  </aside>
 
-  <main>
-    <section id="home" class="hero section">
-      <div class="container">
+  <!-- Contenedor general de cada bloque -->
+  <main class="snap-y snap-mandatory overflow-y-scroll h-screen scroll-smooth">
+
+    <!-- Sección uno del scrol Inicio -->
+    <section id="home" class="hero section snap-start">
+      <div class="container-original font-bold">
         <h1>Hi, soy <span class="highlight">Cristian Lozada</span>.</h1>
         <h2>Construyo soluciones backend seguras y escalables.</h2>
         <div class="buttons">
@@ -40,8 +56,9 @@
       </div>
     </section>
 
-    <section id="about" class="section">
-      <div class="container">
+     <!-- Sección dos sobre sobre mí -->
+    <section id="about" class="section snap-start">
+      <div class="container-original">
         <h2>Sobre mí</h2>
         <p>
           Soy <strong>Cristian Alejandro Lozada Reyes</strong>, desarrollador backend con más de 4 años de experiencia profesional. Especializado en <span class="highlight">Laravel</span>, <span class="highlight">Python</span> y <span class="highlight">AWS</span>, enfocado en construir soluciones seguras, escalables y eficientes.
@@ -56,6 +73,17 @@
 
 </body>
 <script>
+
+  // Implementación del cursor con blur..
+
+  const cursor = document.getElementById('cursor');
+
+  document.addEventListener('mousemove', (e) => {
+    cursor.style.left = `${e.pageX}px`;
+    cursor.style.top = `${e.pageY}px`;
+  });
+
+
   const sections = document.querySelectorAll("section");
   const navLinks = document.querySelectorAll(".menu a");
 

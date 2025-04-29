@@ -10,9 +10,12 @@ html {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif !important;
   background-color: #0A192F;
   color: #FFFFFF;
+  /* cursor: none; Elimina el cursor predeterminado */
+
+  cursor: url('assets/img/cursor.png');
 }
 
 /* Sidebar */
@@ -32,7 +35,7 @@ body {
 
 .logo {
   font-size: 40px;
-  font-weight: 700;
+  font-weight: 700 !important;
   color: #5EEAD4;
 }
 
@@ -96,7 +99,7 @@ main {
   transform: translateY(0);
 }
 
-.container {
+.container-original {
   max-width: 800px;
   text-align: center;
 }
@@ -109,7 +112,7 @@ main {
 
 .hero h2 {
   font-size: 1.5rem;
-  font-weight: 300;
+  font-weight: 300 !important;
   color: #94A3B8;
   margin-bottom: 30px;
 }
@@ -130,7 +133,7 @@ main {
   padding: 12px 24px;
   border-radius: 8px;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 600 !important;
   transition: all 0.3s ease;
 }
 
@@ -161,4 +164,29 @@ main {
   color: #CBD5E1;
 }
 
+  /* El área de desenfoque */
+  .cursor {
+  position: absolute;
+  width: 140px;  /* Tamaño del área de desenfoque */
+  height: 140px;
+  border-radius: 50%;  /* Hace que el área de desenfoque sea redonda */
+  background: rgba(0, 156, 26, 0.719); /* Fondo de color blanco */
+  pointer-events: none;  /* Impide que el cursor interactúe con elementos */
+  filter: blur(150px);  /* Aplica el desenfoque */
+  transition: transform 0.1s ease-out;  /* Transición suave */
+  z-index: 9999;
+  transform: translate(-50%, -50%); /* Asegura que el centro del cursor esté en el mouse */
+}
 
+/* Círculo en el centro del cursor (sin blur) */
+.cursor .inner-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px; /* Tamaño del círculo central */
+  height: 10px;
+  background-color: red; /* Círculo de color rojo */
+  border-radius: 50%;
+  transform: translate(-50%, -50%); /* Centrado perfecto */
+  z-index: 10000;  /* Asegura que el círculo esté sobre el área del blur */
+}
