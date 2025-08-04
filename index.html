@@ -1,128 +1,200 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cristian Lozada - Backend Developer</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-  <!-- Libreria de animaciónes -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-
-  <!-- Libreria de css tailwind -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #0A192F;
+      color: #FFFFFF;
+    }
+    .sidebar {
+      position: fixed; top: 0; left: 0; width: 180px; height: 100vh;
+      background: #0F172A; display: flex; flex-direction: column;
+      justify-content: space-between; padding: 2rem 0; z-index: 50;
+    }
+    .sidebar .logo {
+      font-size: 2rem; font-weight: bold; text-align: center; color: #5EEAD4;
+    }
+    .sidebar .menu li { margin: 1.5rem 0; text-align: center; }
+    .sidebar .menu li a {
+      color: #94A3B8; text-decoration: none; font-size: 1rem; transition: 0.3s;
+    }
+    .sidebar .menu li a:hover,
+    .sidebar .menu li a.active { color: #5EEAD4; }
+    .sidebar .social a {
+      color: #5EEAD4; font-size: 1.5rem; margin: 0.5rem auto;
+      display: block; transition: 0.3s; text-align: center;
+    }
+    .sidebar .social a:hover { color: #3DDC97; }
+    main {
+      margin-left: 180px; padding: 2rem;
+      overflow-y: auto;
+      height: 100vh;
+    }
+    section {
+      min-height: 100vh; display: flex; flex-direction: column;
+      justify-content: center; align-items: center; padding: 2rem;
+      opacity: 1; transform: translateY(0);
+    }
+    .highlight { color: #5EEAD4; }
+    .btn-primary, .btn-secondary {
+      padding: 0.75rem 1.5rem; border-radius: 8px;
+      font-weight: 600; text-decoration: none; transition: 0.3s;
+    }
+    .btn-primary { background: #5EEAD4; color: #0A192F; }
+    .btn-primary:hover { background: #3DDC97; }
+    .btn-secondary {
+      border: 2px solid #5EEAD4; color: #5EEAD4;
+    }
+    .btn-secondary:hover { background: #5EEAD4; color: #0A192F; }
+    .cursor {
+      position: fixed; width: 140px; height: 140px;
+      border-radius: 50%; background: rgba(0, 156, 26, 0.3);
+      pointer-events: none; filter: blur(100px); z-index: 9999;
+      transform: translate(-50%, -50%);
+    }
+    .cursor .inner-circle {
+      position: absolute; top: 50%; left: 50%; width: 10px; height: 10px;
+      background: red; border-radius: 50%; transform: translate(-50%, -50%);
+    }
+    @media (max-width: 768px) {
+      .sidebar { display: none; }
+      main { margin-left: 0; }
+    }
+  </style>
 </head>
 <body>
-
-
-   <!-- El contenedor del cursor con el círculo central -->
-   <div class="cursor" id="cursor">
-    <div class="inner-circle"></div> <!-- El círculo central -->
-  </div>
-
-  <!-- Barra lateral aside -->
+  <div id="cursor" class="cursor"><div class="inner-circle"></div></div>
+  <!-- Sidebar y contenido permanece igual -->
   <aside class="sidebar">
-    <div class="logo">
-      CL
-    </div>
+    <div class="logo">CL</div>
     <ul class="menu">
       <li><a href="#home">Inicio</a></li>
       <li><a href="#about">Sobre mí</a></li>
       <li><a href="#projects">Proyectos</a></li>
       <li><a href="#skills">Tecnologías</a></li>
+      <li><a href="#experience">Experiencia</a></li>
       <li><a href="#contact">Contacto</a></li>
     </ul>
     <div class="social">
       <a href="https://github.com/cristianlosada" target="_blank"><i class="fab fa-github"></i></a>
       <a href="https://linkedin.com/in/cristian-alejandro-lozada-reyes-6ab093162/" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="mailto:cristianlosano314@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+      <a href="mailto:cristianlosano314@gmail.com"><i class="fas fa-envelope"></i></a>
     </div>
   </aside>
+  <main>
+    <section id="home" class="visible">
+      <h1 class="text-4xl font-bold text-center">Hola, soy <span class="highlight">Cristian Lozada</span>.</h1>
+      <h2 class="text-xl text-center text-slate-400 mt-4">Desarrollador Backend enfocado en soluciones seguras y escalables.</h2>
+      <div class="flex justify-center gap-4 mt-6">
+        <a href="#projects" class="btn-primary">Ver proyectos</a>
+        <a href="assets/Cristian_lozada_curriculumVitae.pdf" download class="btn-secondary">Descargar CV</a>
+      </div>
+    </section>
 
-  <!-- Contenedor general de cada bloque -->
-  <main class="snap-y snap-mandatory overflow-y-scroll h-screen scroll-smooth">
+    <section id="about">
+      <h2 class="text-3xl font-bold mb-4">Sobre mí</h2>
+      <p class="max-w-2xl text-center text-slate-300 leading-7">
+        Soy <strong>Cristian Alejandro Lozada Reyes</strong>, desarrollador backend con más de 4 años de experiencia.
+        Especializado en <span class="highlight">Laravel</span>, <span class="highlight">Python</span>, <span class="highlight">AWS</span> y bases de datos relacionales.
+        Me apasiona construir APIs robustas, automatizar procesos y mejorar el rendimiento de sistemas en producción.
+      </p>
+    </section>
 
-    <!-- Sección uno del scrol Inicio -->
-    <section id="home" class="hero section snap-start">
-      <div class="container-original font-bold">
-        <h1>Hi, soy <span class="highlight">Cristian Lozada</span>.</h1>
-        <h2>Construyo soluciones backend seguras y escalables.</h2>
-        <div class="buttons">
-          <a href="#projects" class="btn-primary">Ver proyectos</a>
-          <a href="#contact" class="btn-secondary">Contactarme</a>
+    <section id="projects">
+      <h2 class="text-3xl font-bold mb-4">Proyectos</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
+        <div class="bg-slate-800 p-4 rounded-lg">
+          <h3 class="text-xl font-semibold mb-2">Gestión de correos masivos</h3>
+          <p class="text-slate-300">Sistema distribuido con Laravel y AWS (SES, SNS, S3) para envío de correos masivos con trazabilidad y eventos asincrónicos.</p>
         </div>
+        <div class="bg-slate-800 p-4 rounded-lg">
+          <h3 class="text-xl font-semibold mb-2">Sistema agrícola de análisis de suelos</h3>
+          <p class="text-slate-300">Herramienta web para identificar propiedades físico-químicas del suelo, desarrollada como proyecto universitario.</p>
+        </div>
+        <div class="bg-slate-800 p-4 rounded-lg">
+          <h3 class="text-xl font-semibold mb-2">Sistema de gestión de riegos</h3>
+          <p class="text-slate-300">
+            Aplicación para administrar sistemas de riego en cultivos. Incluye monitoreo, configuración de zonas y control de horarios.
+            <a href="https://disriegos.vercel.app/" target="_blank" class="text-sky-400 underline">Ver proyecto</a>
+          </p>
+        </div>
+        
       </div>
     </section>
 
-     <!-- Sección dos sobre sobre mí -->
-    <section id="about" class="section snap-start">
-      <div class="container-original">
-        <h2>Sobre mí</h2>
-        <p>
-          Soy <strong>Cristian Alejandro Lozada Reyes</strong>, desarrollador backend con más de 4 años de experiencia profesional. Especializado en <span class="highlight">Laravel</span>, <span class="highlight">Python</span> y <span class="highlight">AWS</span>, enfocado en construir soluciones seguras, escalables y eficientes.
-        </p>
-        <p>
-          Me apasiona <strong>resolver problemas reales</strong>, <strong>automatizar procesos</strong> y <strong>optimizar sistemas</strong>. Actualmente finalizando mis estudios en Ingeniería de Software, buscando siempre elevar los estándares de calidad, arquitectura y buenas prácticas en cada proyecto que desarrollo.
-        </p>
+    <section id="skills">
+      <h2 class="text-3xl font-bold mb-4">Tecnologías</h2>
+      <ul class="grid grid-cols-2 md:grid-cols-3 gap-4 text-slate-300 max-w-3xl">
+        <li>PHP / Laravel</li>
+        <li>Python (Flask, FastAPI)</li>
+        <li>JavaScript / Vue.js</li>
+        <li>MySQL / PostgreSQL</li>
+        <li>AWS (SES, SNS, S3)</li>
+        <li>Docker, Git, SCRUM</li>
+      </ul>
+    </section>
+
+    <section id="experience">
+      <h2 class="text-3xl font-bold mb-4">Experiencia</h2>
+      <div class="max-w-3xl text-slate-300">
+        <p><strong>NETGRID SAS</strong> – Desarrollador Junior<br/><small>Laravel, Python, Node.js, AWS, Vue3</small></p>
+        <p class="mb-4"><em>Marzo 2024 - Actualidad</em></p>
+
+        <p><strong>IT Management Zomac SAS</strong> – Fullstack Developer<br/><small>Laravel, PHP, JS, PostgreSQL</small></p>
+        <p class="mb-4"><em>Mayo 2021 - Marzo 2024</em></p>
+
+        <p><strong>Freelancer</strong> – Desarrollador<br/><small>Python, PHP</small></p>
+        <p class="mb-4"><em>2020 - 2021</em></p>
+
+        <p><strong>Torrente Software</strong> – Desarrollador Python</p>
+        <p class="mb-4"><em>2020</em></p>
       </div>
     </section>
 
+    <section id="contact">
+      <h2 class="text-3xl font-bold mb-4">Contacto</h2>
+      <p class="text-slate-300 mb-4 text-center">¿Quieres trabajar conmigo o tienes una idea para desarrollar? ¡Contáctame!</p>
+      <div class="flex flex-col gap-2 text-center text-slate-400">
+        <p>Email: <a href="mailto:cristianlosano314@gmail.com" class="text-sky-400">cristianlosano314@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/cristian-alejandro-lozada-reyes-6ab093162/" target="_blank" class="text-sky-400">Perfil</a></p>
+        <p>Teléfono: +57 301 204 9492</p>
+      </div>
+    </section>
   </main>
-
-</body>
-<script>
-
-  // Implementación del cursor con blur..
-
-  const cursor = document.getElementById('cursor');
-
-  document.addEventListener('mousemove', (e) => {
-    cursor.style.left = `${e.pageX}px`;
-    cursor.style.top = `${e.pageY}px`;
-  });
-
-
-  const sections = document.querySelectorAll("section");
-  const navLinks = document.querySelectorAll(".menu a");
-
-  window.onscroll = () => {
-    let current = "";
-
-    sections.forEach((section) => {
-      const sectionTop = section.offsetTop;
-      if (pageYOffset >= sectionTop - 100) {
-        current = section.getAttribute("id");
-      }
+  <script>
+    const cursor = document.getElementById('cursor');
+    document.addEventListener('mousemove', e => {
+      cursor.style.left = `${e.pageX}px`;
+      cursor.style.top = `${e.pageY}px`;
     });
 
-    navLinks.forEach((link) => {
-      link.classList.remove("active");
-      if (link.getAttribute("href").includes(current)) {
-        link.classList.add("active");
-      }
-    });
-  };
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".menu a");
 
-    // Mostrar sección inicial al cargar
-    window.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('.section').forEach(section => {
-        const rect = section.getBoundingClientRect();
-        if (rect.top <= window.innerHeight) {
-          section.classList.add('visible');
+    window.onscroll = () => {
+      let current = "";
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (pageYOffset >= sectionTop - 100) {
+          current = section.getAttribute("id");
         }
       });
-    });
-  
-    // Mostrar las demás secciones al hacer scroll
-    window.addEventListener('scroll', () => {
-      document.querySelectorAll('.section').forEach(section => {
-        const rect = section.getBoundingClientRect();
-        if (rect.top <= window.innerHeight * 0.8) {
-          section.classList.add('visible');
+      navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href").includes(current)) {
+          link.classList.add("active");
         }
       });
-    });
+    };
   </script>
+</body>
 </html>
