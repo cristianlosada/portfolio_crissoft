@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cristian Lozada - Backend Developer</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -14,7 +14,7 @@
   </div>
 
   <!-- Mobile Menu Toggle -->
-  <button class="mobile-menu-toggle" id="mobileMenuToggle">
+  <button type="button" class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Abrir menÃº de navegaciÃ³n">
     <span></span>
     <span></span>
     <span></span>
@@ -25,9 +25,9 @@
     <nav>
       <ul class="menu">
         <li><a href="#home" class="nav-link">Inicio</a></li>
-        <li><a href="#about" class="nav-link">Sobre mí</a></li>
+        <li><a href="#about" class="nav-link">Sobre mÃ­</a></li>
         <li><a href="#projects" class="nav-link">Proyectos</a></li>
-        <li><a href="#skills" class="nav-link">Tecnologías</a></li>
+        <li><a href="#skills" class="nav-link">TecnologÃ­as</a></li>
         <li><a href="#experience" class="nav-link">Experiencia</a></li>
         <li><a href="#contact" class="nav-link">Contacto</a></li>
       </ul>
@@ -70,35 +70,35 @@
     <!-- About Section -->
     <section id="about" class="section">
       <div class="container">
-        <h2 class="section-title">Sobre mí</h2>
+        <h2 class="section-title">Sobre mÃ­</h2>
         <div class="about-content">
           <div class="about-text">
             <p>
-              Soy <strong>Cristian Alejandro Lozada Reyes</strong>, desarrollador de software con más de 4 años de experiencia 
-              diseñando y construyendo soluciones tecnológicas robustas, escalables y orientadas al impacto real del negocio.
+              Soy <strong>Cristian Alejandro Lozada Reyes</strong>, desarrollador de software con mÃ¡s de 4 aÃ±os de experiencia
+              diseÃ±ando y construyendo soluciones tecnolÃ³gicas robustas, escalables y orientadas al impacto real del negocio.
             </p>
             <p>
-              Mi núcleo está en el <span class="highlight">desarrollo backend</span> con <span class="highlight">Laravel</span>, 
-              <span class="highlight">Python</span> y <span class="highlight">Node.js</span>, pero también me desenvuelvo 
-              en el frontend con <span class="highlight">Vue.js</span>, <span class="highlight">Angular</span> y 
-              <span class="highlight">React</span>, y en el desarrollo móvil con <span class="highlight">Flutter</span>. 
-              He trabajado con servicios <span class="highlight">AWS</span> (SES, SNS, S3), bases de datos relacionales 
-              como MySQL y PostgreSQL, y no relacionales como <span class="highlight">MongoDB</span> y 
-              <span class="highlight">Redis</span>. También he implementado APIs con 
-              <span class="highlight">GraphQL</span> y el uso de <span class="highlight">Hasura</span> como 
+              Mi nÃºcleo estÃ¡ en el <span class="highlight">desarrollo backend</span> con <span class="highlight">Laravel</span>,
+              <span class="highlight">Python</span> y <span class="highlight">Node.js</span>, pero tambiÃ©n me desenvuelvo
+              en el frontend con <span class="highlight">Vue.js</span>, <span class="highlight">Angular</span> y
+              <span class="highlight">React</span>, y en el desarrollo mÃ³vil con <span class="highlight">Flutter</span>.
+              He trabajado con servicios <span class="highlight">AWS</span> (SES, SNS, S3), bases de datos relacionales
+              como MySQL y PostgreSQL, y no relacionales como <span class="highlight">MongoDB</span> y
+              <span class="highlight">Redis</span>. TambiÃ©n he implementado APIs con
+              <span class="highlight">GraphQL</span> y el uso de <span class="highlight">Hasura</span> como
               capa de datos en tiempo real sobre PostgreSQL.
             </p>
             <p>
-              Me preocupo por la calidad y entrega continua del software: implemento pipelines de 
-              <span class="highlight">CI/CD con GitHub Actions</span> y uso <span class="highlight">Docker</span> 
-              como estándar de despliegue en la mayoría de mis proyectos, junto con 
-              <span class="highlight">Nginx</span> y administración de <span class="highlight">VPS</span> 
-              con prácticas de seguridad y optimización SEO.
+              Me preocupo por la calidad y entrega continua del software: implemento pipelines de
+              <span class="highlight">CI/CD con GitHub Actions</span> y uso <span class="highlight">Docker</span>
+              como estÃ¡ndar de despliegue en la mayorÃ­a de mis proyectos, junto con
+              <span class="highlight">Nginx</span> y administraciÃ³n de <span class="highlight">VPS</span>
+              con prÃ¡cticas de seguridad y optimizaciÃ³n SEO.
             </p>
             <div class="stats">
               <div class="stat">
                 <span class="stat-number">4+</span>
-                <span class="stat-label">Años de experiencia</span>
+                <span class="stat-label">AÃ±os de experiencia</span>
               </div>
               <div class="stat">
                 <span class="stat-number">20+</span>
@@ -106,7 +106,7 @@
               </div>
               <div class="stat">
                 <span class="stat-number">10+</span>
-                <span class="stat-label">Tecnologías dominadas</span>
+                <span class="stat-label">TecnologÃ­as dominadas</span>
               </div>
             </div>
           </div>
@@ -123,8 +123,8 @@
             <div class="project-icon">
               <i class="fas fa-envelope-open-text"></i>
             </div>
-            <h3>Gestión de correos masivos</h3>
-            <p>Sistema distribuido con Laravel y AWS (SES, SNS, S3) para envío de correos masivos con trazabilidad y eventos asincrónicos.</p>
+            <h3>GestiÃ³n de correos masivos</h3>
+            <p>Sistema distribuido con Laravel y AWS (SES, SNS, S3) para envÃ­o de correos masivos con trazabilidad y eventos asincrÃ³nicos.</p>
             <div class="project-tech">
               <span class="tech-tag">Laravel</span>
               <span class="tech-tag">AWS</span>
@@ -136,8 +136,8 @@
             <div class="project-icon">
               <i class="fas fa-seedling"></i>
             </div>
-            <h3>Sistema agrícola de análisis de suelos</h3>
-            <p>Herramienta web para identificar propiedades físico-químicas del suelo, desarrollada como proyecto universitario.</p>
+            <h3>Sistema agrÃ­cola de anÃ¡lisis de suelos</h3>
+            <p>Herramienta web para identificar propiedades fÃ­sico-quÃ­micas del suelo, desarrollada como proyecto universitario.</p>
             <div class="project-tech">
               <span class="tech-tag">Python</span>
               <span class="tech-tag">Flask</span>
@@ -149,8 +149,8 @@
             <div class="project-icon">
               <i class="fas fa-tint"></i>
             </div>
-            <h3>Sistema de gestión de riegos</h3>
-            <p>Aplicación para administrar sistemas de riego en cultivos. Incluye monitoreo, configuración de zonas y control de horarios.</p>
+            <h3>Sistema de gestiÃ³n de riegos</h3>
+            <p>AplicaciÃ³n para administrar sistemas de riego en cultivos. Incluye monitoreo, configuraciÃ³n de zonas y control de horarios.</p>
             <div class="project-tech">
               <span class="tech-tag">Vue.js</span>
               <span class="tech-tag">Python</span>
@@ -167,8 +167,8 @@
             <div class="project-icon">
               <i class="fas fa-landmark"></i>
             </div>
-            <h3>Personería Municipal de Baraya</h3>
-            <p>Sitio web institucional para la Personería Municipal de Baraya, Huila. Plataforma informativa con secciones de transparencia, nosotros y gestión de contenido público.</p>
+            <h3>PersonerÃ­a Municipal de Baraya</h3>
+            <p>Sitio web institucional para la PersonerÃ­a Municipal de Baraya, Huila. Plataforma informativa con secciones de transparencia, nosotros y gestiÃ³n de contenido pÃºblico.</p>
             <div class="project-tech">
               <span class="tech-tag">Laravel</span>
               <span class="tech-tag">PHP</span>
@@ -187,8 +187,8 @@
             <div class="project-icon">
               <i class="fas fa-industry"></i>
             </div>
-            <h3>Quimint - Software de Despachos & App Cotizador</h3>
-            <p>Mantenimiento y mejora del software de despachos de Quimint S.A. Adicionalmente, desarrollo de aplicación móvil en Flutter para gestionar cotizaciones de forma ágil desde dispositivos Android e iOS.</p>
+            <h3>Quimint - Software de Despachos &amp; App Cotizador</h3>
+            <p>Mantenimiento y mejora del software de despachos de Quimint S.A. Adicionalmente, desarrollo de aplicaciÃ³n mÃ³vil en Flutter para gestionar cotizaciones de forma Ã¡gil desde dispositivos Android e iOS.</p>
             <div class="project-tech">
               <span class="tech-tag">Laravel</span>
               <span class="tech-tag">PHP</span>
@@ -211,7 +211,7 @@
     <!-- Skills Section -->
     <section id="skills" class="section">
       <div class="container">
-        <h2 class="section-title">Stack Tecnológico</h2>
+        <h2 class="section-title">Stack TecnolÃ³gico</h2>
         <div class="skills-grid">
           <div class="skill-category">
             <h3>Backend</h3>
@@ -232,7 +232,7 @@
           </div>
 
           <div class="skill-category">
-            <h3>APIs & Integraciones</h3>
+            <h3>APIs &amp; Integraciones</h3>
             <div class="skills-list">
               <div class="skill-item">
                 <i class="fas fa-project-diagram"></i>
@@ -250,7 +250,7 @@
           </div>
 
           <div class="skill-category">
-            <h3>Frontend & Mobile</h3>
+            <h3>Frontend &amp; Mobile</h3>
             <div class="skills-list">
               <div class="skill-item">
                 <i class="fab fa-js-square"></i>
@@ -302,7 +302,7 @@
           </div>
 
           <div class="skill-category">
-            <h3>Cloud & DevOps</h3>
+            <h3>Cloud &amp; DevOps</h3>
             <div class="skills-list">
               <div class="skill-item">
                 <i class="fab fa-aws"></i>
@@ -337,7 +337,7 @@
               <h3>Desarrollador de Software</h3>
               <h4>Experimentality</h4>
               <span class="timeline-date">Octubre 2025 - Actualidad</span>
-              <p>Desarrollo de soluciones digitales innovadoras trabajando con tecnologías modernas de frontend, backend e inteligencia artificial. Integración de flujos con Langflow, APIs GraphQL con Hasura, desarrollo en Angular y React, y aprendizaje activo de VTEX para comercio electrónico.</p>
+              <p>Desarrollo de soluciones digitales innovadoras trabajando con tecnologÃ­as modernas de frontend, backend e inteligencia artificial. IntegraciÃ³n de flujos con Langflow, APIs GraphQL con Hasura, desarrollo en Angular y React, y aprendizaje activo de VTEX para comercio electrÃ³nico.</p>
               <div class="tech-stack">
                 <span class="tech-tag">Angular</span>
                 <span class="tech-tag">React</span>
@@ -356,9 +356,9 @@
             <div class="timeline-dot"></div>
             <div class="timeline-content">
               <h3>Desarrollador Freelance</h3>
-              <h4>Proveedor tecnológico independiente</h4>
+              <h4>Proveedor tecnolÃ³gico independiente</h4>
               <span class="timeline-date">Diciembre 2024 - Actualidad</span>
-              <p>Desarrollo y mantenimiento de proyectos para clientes como Quimint S.A. (software de despachos y app móvil cotizador en Flutter) y la Personería Municipal de Baraya. Administración de VPS con Docker, Nginx, seguridad de servidores y optimización SEO.</p>
+              <p>Desarrollo y mantenimiento de proyectos para clientes como Quimint S.A. (software de despachos y app mÃ³vil cotizador en Flutter) y la PersonerÃ­a Municipal de Baraya. AdministraciÃ³n de VPS con Docker, Nginx, seguridad de servidores y optimizaciÃ³n SEO.</p>
               <div class="tech-stack">
                 <span class="tech-tag">Laravel</span>
                 <span class="tech-tag">Flutter</span>
@@ -377,7 +377,7 @@
               <h3>Desarrollador Junior</h3>
               <h4>NETGRID SAS</h4>
               <span class="timeline-date">Marzo 2024 - Octubre 2025</span>
-              <p>Desarrollo de aplicaciones backend con Laravel, Python y Node.js. Implementación de servicios AWS, desarrollo frontend con Vue3 e integración de bases de datos relacionales y no relacionales.</p>
+              <p>Desarrollo de aplicaciones backend con Laravel, Python y Node.js. ImplementaciÃ³n de servicios AWS, desarrollo frontend con Vue3 e integraciÃ³n de bases de datos relacionales y no relacionales.</p>
               <div class="tech-stack">
                 <span class="tech-tag">Laravel</span>
                 <span class="tech-tag">Python</span>
@@ -416,7 +416,7 @@
               <h3>Desarrollador Python</h3>
               <h4>Torrente Software</h4>
               <span class="timeline-date">2020</span>
-              <p>Desarrollo de aplicaciones y scripts en Python para automatización de procesos.</p>
+              <p>Desarrollo de aplicaciones y scripts en Python para automatizaciÃ³n de procesos.</p>
               <div class="tech-stack">
                 <span class="tech-tag">Python</span>
               </div>
@@ -429,12 +429,12 @@
     <!-- Contact Section -->
     <section id="contact" class="section">
       <div class="container">
-        <h2 class="section-title">¡Trabajemos juntos!</h2>
+        <h2 class="section-title">Â¡Trabajemos juntos!</h2>
         <div class="contact-content">
           <p class="contact-subtitle">
-            ¿Tienes un proyecto en mente o quieres colaborar? Me encantaría conocer tu propuesta.
+            Â¿Tienes un proyecto en mente o quieres colaborar? Me encantarÃ­a conocer tu propuesta.
           </p>
-          
+
           <div class="contact-grid">
             <div class="contact-item">
               <div class="contact-icon">
@@ -461,7 +461,7 @@
                 <i class="fas fa-phone"></i>
               </div>
               <div class="contact-info">
-                <h3>Teléfono</h3>
+                <h3>TelÃ©fono</h3>
                 <span>+57 301 204 9492</span>
               </div>
             </div>
