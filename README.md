@@ -2,7 +2,7 @@
 
 Sitio web de portafolio personal desarrollado con HTML, CSS y JavaScript vanilla. Presenta mi experiencia profesional, proyectos destacados, stack tecnológico e información de contacto.
 
-[![CI - Validate Portfolio](https://github.com/cristianlosada/portafolio_personal/actions/workflows/ci.yml/badge.svg)](https://github.com/cristianlosada/portafolio_personal/actions/workflows/ci.yml)
+[![CI - Validate Portfolio](https://github.com/cristianlosada/portafolio_personal/actions/workflows/ci.yml/badge.svg)](https://github.com/cristianlosada/portafolio_personal/actions/workflows/ci.yml/badge.svg)
 [![Deploy to GitHub Pages](https://github.com/cristianlosada/portafolio_personal/actions/workflows/deploy.yml/badge.svg)](https://github.com/cristianlosada/portafolio_personal/actions/workflows/deploy.yml)
 
 ---
