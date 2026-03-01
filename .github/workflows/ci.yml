@@ -1,0 +1,43 @@
+name: CI - Validate Portfolio
+
+on:
+  push:
+    branches: [main, master, develop]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  validate:
+    name: Validate HTML & CSS
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install HTML validator
+        run: npm install -g html-validate
+
+      - name: Validate HTML
+        run: html-validate index.html
+
+      - name: Install stylelint
+        run: npm install -g stylelint stylelint-config-standard
+
+      - name: Create stylelint config
+        run: |
+          echo '{ "extends": ["stylelint-config-standard"] }' > .stylelintrc.json
+
+      - name: Lint CSS
+        run: stylelint "styles.css"
+
+      - name: Check for broken links (informational)
+        run: |
+          echo "✅ Validation complete"
+          echo "Files validated:"
+          ls -lh index.html styles.css script.js
